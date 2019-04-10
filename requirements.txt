@@ -1,0 +1,6 @@
+required python packages:
+pandas==0.23.4
+numpy==1.15.4
+sckit-learn==0.20.2
+nltk==3.4
+keras==2.2.4
