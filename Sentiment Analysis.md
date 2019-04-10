@@ -67,4 +67,4 @@ Les traitements appliqués aux données sont:
  3. Embedding : transformer les mots en vecteurs en tenant compte du contexte. Dans notre cas, l'embedding est fait avec la couche du réseaux de neuronnes. Ce choix est due au fait que le résultat de classification a été légèrement meilleur par rapport à l'utilisation du word2vec sur le corpus.
 
  **SVM**
-Le TF-IDF permet de transformer les documents en vecteurs sparse (une matrice dans le cas du DL) contenant des coefficents indiquant l'importance de chacun de leurs mots. Ce qui m'a permis ensuite de considérer l'ensemble du corpus pour l'entrainement et avoir un modèle avec une performance meilleur que le premier.
+Le TF-IDF permet de transformer les documents en vecteurs sparse (une matrice dans le cas du DL) contenant des coefficents indiquant l'importance de chacun de leurs mots. Ce qui m'a permis ensuite de considérer l'ensemble du corpus pour l'entrainement et avoir un modèle avec une performance meilleur que celle du premier.
