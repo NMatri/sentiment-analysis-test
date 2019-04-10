@@ -34,7 +34,33 @@ Dans un premier temps , j'ai commencé par la création du modèle de deep learn
 
 Ce modèle a une précision globale égale à 0.84.  J'ai fait un tuning de paramètres en augmentant le nombre de filtres de la couche CNN et en ajoutant des neurones aux couches connectées, mais la performance n'a pas pu dépassé 0.84.
 
-Dans la phase de traitement des documents, j'ai fait la tokenisation des documents et ensuite ajouter du padding aux documents afin de garantir une même longeur pour tous les documents
-
 ### Modèle avec SVM
 Pour ce modèle j'ai utilisé l'algorithme SVM suite à l'application du TF-IDF à l'ensemble des documents. Ce modèle a une performance supérieure au modèle précédent : une précision globale de 0.88. 
+
+### Explication des différents choix 
+
+#### Nettoyage des données
+
+Le choix des différents techniques de nettoyage a été fait suite à l'application de la tokenisation aux documents. L'analyse du résultat de la tokenisation sur le text brute m'a permis de voir la présence de balise, des urls etc.
+
+#### Pré-traitements
+
+Le choix de l'elimination des stopwords est basé sur le fait que les documents sont longs et ils contiennent beaucoup de stopwords. De plus, ces mots n'ont pas de valeur sémantique. Donc, ça va permettre de réduire la taille des documents sans perdre de l'information.
+
+#### Les algorithmes
+
+J'ai choisit d'utiliser les algorithmes SVM et deep learning parce qu'ils ont été déja utilisés pour cette problématique et ils permettent d'atteindre de très bonnes performances.
+
+Les hyperparamètres de chacun des algorithmes ont été choisi après tuning et test de différents valeurs pour chaque hyperparamètres.
+
+#### Les traitements
+
+**Deep learning**
+Les traitements appliqués aux données sont:
+
+ 1. Tokenisation : transformer chaque document en liste de mots en considérant seulement les 5000 mots les plus fréquents. Le choix de 5000 a été fait dans le but de minimiser les dimensions des matrices d'input au modèle tout en gardant une bonne performance de classification. 
+ 2. Padding : ajouter du padding à chaque de document de sorte que l'emsemble des documents aient la meme longeur.
+ 3. Embedding : transformer les mots en vecteurs en tenant compte du contexte. Dans notre cas, l'embedding est fait avec la couche du réseaux de neuronnes. Ce choix est due au fait que le résultat de classification a été légèrement meilleur par rapport à l'utilisation du word2vec sur le corpus.
+
+ **SVM**
+Le TF-IDF permet de transformer chaque  
