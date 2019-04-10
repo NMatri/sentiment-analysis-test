@@ -32,10 +32,10 @@ Les premières étapes sont identiques pour les deux modèles. La différence vi
 ### Modèle de Deep Learning
 Dans un premier temps , j'ai commencé par la création du modèle de deep learning. Le modèle est composé d'une couche CNN, suivie d'une couche de MaxPooling permettant la réduction des dimensions de l'output de la couche CNN. Après ces deux couches, il y a deux couches connectées. En tete de l'ensemble de ces couches, il y a la couche Embedding, qui comme son nom l'indique, réalise l'embedding des mots du corpus lors de l'entrainement du modèle.
 
-Ce modèle a une précision globale égale à 0.84.  J'ai fait un tuning de paramètres en augmentant le nombre de filtres de la couche CNN et en ajoutant des neurones aux couches connectées, mais la performance n'a pas pu dépassé 0.84.
+Ce modèle a une précision globale égale à 0.84. J'ai fait un tuning de paramètres en augmentant le nombre de filtres de la couche CNN et en ajoutant des neurones aux couches connectées, mais la performance n'a pas pu dépassé 0.84.
 
 ### Modèle avec SVM
-Pour ce modèle j'ai utilisé l'algorithme SVM suite à l'application du TF-IDF à l'ensemble des documents. Ce modèle a une performance supérieure au modèle précédent : une précision globale de 0.88. 
+Pour ce modèle j'ai utilisé l'algorithme SVM suite à l'application du TF-IDF à l'ensemble des documents. Ce modèle a une performance supérieure au modèle précédent : une précision globale égale à 0.88. 
 
 ### Explication des différents choix 
 
@@ -53,7 +53,7 @@ Le choix de l'elimination des stopwords est basé sur le fait que les documents 
 
 #### Les algorithmes
 
-J'ai choisit d'utiliser les algorithmes SVM et deep learning parce qu'ils ont été déja utilisés pour cette problématique et ils permettent d'atteindre de très bonnes performances.
+J'ai choisi d'utiliser les algorithmes SVM et deep learning parce qu'ils ont été déja utilisés pour cette problématique et ils permettent d'atteindre de très bonnes performances.
 
 Les hyperparamètres de chacun des algorithmes ont été choisi après tuning et test de différents valeurs pour chaque hyperparamètres.
 
